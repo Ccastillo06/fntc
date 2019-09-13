@@ -1,0 +1,35 @@
+{
+  "name": "fntc",
+  "version": "1.0.0",
+  "description": "Tiny lightweight async/await handler",
+  "keywords": [],
+  "author": "Ccastillo06",
+  "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "microbundle": "^0.11.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules"
+    ],
+    "testRegex": "(/tests/.*|(\\.|/)(test))\\.(js)?$",
+    "transform": {
+      "^.+\\.(js)?$": "babel-jest"
+    }
+  }
+}
