@@ -1,8 +1,12 @@
-## What's fntc? ⁉️
+<p align="center">
+  <img src="assets/logo.png" alt="FNTC logo" width="300px" />
+</p>
 
-This little experimental package with a size of 244B gzipped let's you handle try/catch function in a different and React Hooks like way.
+## What's fntc? ⁉️
 
-### Show me how 💪
+This little experimental package with a size 637B let's you handle try/catch function in a different and React Hooks like way.
+
+### Show me how to use it 💪
 
 By using `fntc` you can approach try/catch in a simpler way.
 Intead of doing this:
