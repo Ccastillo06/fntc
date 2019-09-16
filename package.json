@@ -1,15 +1,17 @@
 {
   "name": "fntc",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Tiny lightweight async/await handler",
   "keywords": [],
   "author": "Ccastillo06",
   "license": "MIT",
   "source": "src/index.js",
   "main": "dist/index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
+    "prepare": "npm run build",
     "test": "jest"
   },
   "devDependencies": {
@@ -19,8 +21,14 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/runtime": "^7.6.0",
     "babel-jest": "^24.9.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.5",
     "jest": "^24.9.0",
-    "microbundle": "^0.11.0"
+    "lint-staged": "^9.2.5",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.18.2"
   },
   "jest": {
     "verbose": true,
@@ -31,5 +39,27 @@
     "transform": {
       "^.+\\.(js)?$": "babel-jest"
     }
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "dist",
+    "index.d.ts",
+    "package.json",
+    "README.md"
+  ]
 }

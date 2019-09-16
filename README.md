@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="FNTC logo" width="300px" />
+  <img src="https://raw.githubusercontent.com/Ccastillo06/fntc/master/assets/logo.png" alt="FNTC logo" width="300px" />
 </p>
 
 ## What's fntc? ⁉️
